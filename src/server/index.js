@@ -10,8 +10,8 @@ dotenv.config();
 myData={}
 
 var textapi = new AYLIENTextAPI({
-    application_id: "02864a35",
-    application_key: "6d337cc3c2c81472457a41c659b3e96d"
+    application_id: process.env.API_ID,
+    application_key: process.env.API_KEY
  });
 
 const app = express()
