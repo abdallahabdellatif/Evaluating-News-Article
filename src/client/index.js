@@ -13,4 +13,3 @@ export{
     checkInput,
     handleSubmit
 }
-alert("haiii");

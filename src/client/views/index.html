@@ -8,10 +8,10 @@
     <body>
 
         <header>
-            <div class="">
+            <div class="website-name">
                 Regina Philange
             </div>
-            <div class="">
+            <div class="welcome">
                 Welcome to the website!
             </div>
         </header>
@@ -26,12 +26,25 @@
 
             <section>
                 <strong>Your Results:</strong>
-                <div id="results"></div>
+                <div id="results">
+                    <div id="polarity"></div>
+                    <div id="subjectivity"></div>
+                    <div id="confidence"></div>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <p>Credits go to alyien API</p>
+        <footer class="ft">
+            <p>Credits go to MeaningCloud API</p>
         </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
     </body>
 </html>
